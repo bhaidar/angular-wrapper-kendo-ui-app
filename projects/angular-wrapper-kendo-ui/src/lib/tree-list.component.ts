@@ -11,10 +11,11 @@ import {
   Input
 } from '@angular/core';
 
-declare var jQuery: any;
+declare var kendo: any;
 
 @Component({
-  selector: 'aku-tree-list',
+  // tslint:disable-next-line:component-selector
+  selector: 'ng-treelist',
   templateUrl: './tree-list.component.html',
   styleUrls: ['./tree-list.component.scss'],
   encapsulation: ViewEncapsulation.None,
@@ -36,7 +37,7 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    const treeList = jQuery(this.treelistEl.nativeElement);
+    const treeList = kendo.jQuery(this.treelistEl.nativeElement);
 
     this.zone.runOutsideAngular(() => {
       this._treelist = treeList
@@ -51,6 +52,10 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public clearSelection(): void {
     return this._treelist && this._treelist.clearSelection();
+  }
+
+  public saveAsExcel(): void {
+    return this._treelist && this._treelist.saveAsExcel();
   }
 
 }

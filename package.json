@@ -1,6 +1,25 @@
 {
   "name": "angular-wrapper-kendo-ui-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A sample application to use and test the TreeList component defined in the *angular-wrapper-kendo-ui* library.",
+  "author": "Bilal Haidar <bhaidar@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhaidar/angular-wrapper-kendo-ui-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bhaidar/angular-wrapper-kendo-ui-app/issues"
+  },
+  "homepage": "https://github.com/bhaidar/angular-wrapper-kendo-ui-app",
+  "keywords": [
+    "angular",
+    "angular6",
+    "telerik",
+    "javacript",
+    "typescript",
+    "kendoui"
+  ],
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
