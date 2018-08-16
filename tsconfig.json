@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-wrapper-kendo-ui": [
+        "dist/angular-wrapper-kendo-ui"
+      ],
+      "angular-wrapper-kendo-ui/*": [
+        "dist/angular-wrapper-kendo-ui/*"
+      ]
+    }
   }
 }
