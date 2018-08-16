@@ -1,27 +1,31 @@
-# AngularWrapperKendoUiApp
+# Angular Wrapper for Kendo-ui App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+An Angular 6 wrapper library to the Telerik Kendo UI jquery controls. 
 
-## Development server
+For now, this library wraps the following controls:
+- TreeList control
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+More controls to come as per need.
 
-## Code scaffolding
+## How to run the app?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Run `npm install`
+2. Run `npm start`
 
-## Build
+## How to build the wrapper library?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Run `npm run build-lib`
 
-## Running unit tests
+Remember, whenever you do any changes on the library, you need to rebuild again before testing.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## How can I contribute?
 
-## Running end-to-end tests
+If you would like to help me add more functionality to this library, all you have to do is `fork` this repository and send a `Pull Request`. I will gladly review your `PR`s and incorporate the code to this library.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## How to contact me?
 
-## Further help
+You can always drop me an email or communicate with me over Twitter:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Twitter: @bhaidar
+- Email:   bhaidar@gmail.com
+- Blog:    https://www.bilalhaidar.com
