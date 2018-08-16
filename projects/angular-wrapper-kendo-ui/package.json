@@ -4,9 +4,13 @@
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "@progress/kendo-ui": ">= 2018.2.806",
     "jquery": ">= 3.3.1"
   },
   "devDependencies": {
+    "@progress/kendo-ui": ">= 2018.2.806",
+    "@types/kendo-ui": "^2018.2.3",
+    "@types/node": "~8.9.4",
     "jquery": ">= 3.3.1"
   }
 }

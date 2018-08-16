@@ -15,7 +15,10 @@
     "lib": [
       "dom",
       "es2015"
-    ]
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
   },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,

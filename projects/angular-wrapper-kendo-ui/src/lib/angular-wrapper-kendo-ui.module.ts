@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
-import { AngularWrapperKendoUiComponent } from './angular-wrapper-kendo-ui.component';
+import { TreeListComponent } from './tree-list.component';
+
+import '@progress/kendo-ui';
+import 'jquery';
 
 @NgModule({
   imports: [
   ],
-  declarations: [AngularWrapperKendoUiComponent],
-  exports: [AngularWrapperKendoUiComponent]
+  declarations: [TreeListComponent],
+  exports: [TreeListComponent]
 })
 export class AngularWrapperKendoUiModule { }

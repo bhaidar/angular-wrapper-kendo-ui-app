@@ -25,6 +25,8 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@progress/kendo-ui": "^2018.2.806",
+    "@progress/kendo-theme-default": "^2.54.1",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "rxjs": "^6.0.0",
