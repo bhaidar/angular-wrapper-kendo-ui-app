@@ -7,7 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "npm-lib": "cd projects/angular-wrapper-kendo-ui && npm install",
+    "build-lib": "ng build --prod angular-wrapper-kendo-ui",
+    "pack-lib": "cd dist/angular-wrapper-kendo-ui && npm pack",
+    "package-lib": "npm run build-lib && npm run pack-lib",
+    "publish": "cd dist/angular-wrapper-kendo-ui && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +26,7 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
+    "jquery": "^3.3.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
