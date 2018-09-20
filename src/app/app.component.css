@@ -1,0 +1,9 @@
+header {
+    margin: 0 0 15px 0;
+    padding: 5px;
+    background-color: lightgrey;
+}
+
+header button:not(:first-child) {
+    margin-left: 10px;
+}

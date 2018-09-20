@@ -1,11 +1,15 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, ElementRef, NgZone, ViewChild, ViewEncapsulation } from '@angular/core';
+import { TreeListComponent } from 'projects/angular-wrapper-kendo-ui/src/public_api';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit  {
+
+  @ViewChild('treelist') treelist: TreeListComponent;
 
   private options: any;
 
@@ -72,6 +76,9 @@ export class AppComponent implements OnInit {
           console.log(options.data.models);
           options.success();
         },
+        destroy: (options) => {
+          options.success(data);
+        }
       },
       batch: true,
       schema: {
@@ -114,4 +121,22 @@ export class AppComponent implements OnInit {
       },
     };
   }
+
+  addRow(): void {
+    return this.treelist && this.treelist.addRow();
+    // return this.treelist && this.treelist.addRow('#treelist tbody>tr:first');
+  }
+
+  removeRow(): void {
+    return this.treelist && this.treelist.removeRow('#treelist tbody>tr:nth(5)');
+  }
+
+  editRow(): void {
+    return this.treelist && this.treelist.editRow('#treelist tbody>tr:eq(2)');
+  }
+
+  clearSelection(): void {
+    return this.treelist && this.treelist.clearSelection();
+  }
+
 }

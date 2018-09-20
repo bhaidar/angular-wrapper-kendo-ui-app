@@ -50,12 +50,31 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     kendo.destroy(this.elementRef.nativeElement);
   }
 
-  public clearSelection(): void {
-    return this._treelist && this._treelist.clearSelection();
+  public addRow(parentRow: string | Element | JQuery = ''): void {
+    return this._treelist && this._treelist.addRow(parentRow);
   }
 
-  public saveAsExcel(): void {
-    return this._treelist && this._treelist.saveAsExcel();
+  public editRow(row: string | JQuery ): void {
+    if (!row) {
+      return;
+    }
+
+    const internalRow = (row instanceof jQuery ? row : kendo.jQuery(row));
+
+
+    return this._treelist && this._treelist.editRow(internalRow);
+  }
+
+  public removeRow(row: string | Element | JQuery): void {
+    if (!row) {
+      return;
+    }
+
+    return this._treelist && this._treelist.removeRow(row);
+  }
+
+  public clearSelection(): void {
+    return this._treelist && this._treelist.clearSelection();
   }
 
 }
