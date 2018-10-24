@@ -73,6 +73,14 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     return this._treelist && this._treelist.removeRow(row);
   }
 
+  public expand(row: string | Element | JQuery): void {
+    if (!row) {
+      return;
+    }
+
+    return this._treelist && this._treelist.expand(row);
+  }
+
   public clearSelection(): void {
     return this._treelist && this._treelist.clearSelection();
   }

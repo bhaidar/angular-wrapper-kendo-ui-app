@@ -28,7 +28,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "npm-lib": "cd projects/angular-wrapper-kendo-ui && npm install",
-    "build-lib": "ng build --prod angular-wrapper-kendo-ui",
+    "build-lib": "rimraf -rf dist && ng build --prod angular-wrapper-kendo-ui",
     "pack-lib": "cd dist/angular-wrapper-kendo-ui && npm pack",
     "package-lib": "npm run build-lib && npm run pack-lib",
     "publish": "cd dist/angular-wrapper-kendo-ui && npm publish"
@@ -70,11 +70,11 @@
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "^3.0.0",
-    "protractor": "~5.3.0",
+    "protractor": "^5.4.1",
     "ts-node": "~5.0.1",
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.9.2"
   }
 }
