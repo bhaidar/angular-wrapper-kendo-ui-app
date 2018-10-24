@@ -81,6 +81,16 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     return this._treelist && this._treelist.expand(row);
   }
 
+  public select(row: string | Element | JQuery): JQuery {
+    if (!row) {
+      return;
+    }
+
+    const internalRow = (row instanceof jQuery ? row : kendo.jQuery(row));
+
+    return this._treelist && this._treelist.select(internalRow);
+  }
+
   public clearSelection(): void {
     return this._treelist && this._treelist.clearSelection();
   }

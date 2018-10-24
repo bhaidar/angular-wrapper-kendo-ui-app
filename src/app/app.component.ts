@@ -409,6 +409,10 @@ export class AppComponent implements OnInit {
     return this.treelist && this.treelist.expand('#treelist tbody>tr:eq(0)');
   }
 
+  select(): void {
+    this.treelist.select('#treelist tbody>tr:eq(1)');
+  }
+
   clearSelection(): void {
     return this.treelist && this.treelist.clearSelection();
   }
