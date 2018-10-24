@@ -1,6 +1,6 @@
 {
   "name": "angular-wrapper-kendo-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple library to wrapper Telerik Kendo UI jQuery controls in Angular 6 components.",
   "author": "Bilal Haidar <bhaidar@gmail.com>",
   "repository": {
