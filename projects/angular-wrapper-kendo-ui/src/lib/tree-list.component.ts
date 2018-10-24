@@ -50,6 +50,18 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     kendo.destroy(this.elementRef.nativeElement);
   }
 
+  get dataSource(): any {
+    return this._treelist && this._treelist.dataSource;
+  }
+
+  get content(): JQuery {
+    return this._treelist && this._treelist.content;
+  }
+
+  get tbody(): JQuery {
+    return this._treelist && this._treelist.tbody;
+  }
+
   public addRow(parentRow: string | Element | JQuery = ''): void {
     return this._treelist && this._treelist.addRow(parentRow);
   }
@@ -89,6 +101,14 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     const internalRow = (row instanceof jQuery ? row : kendo.jQuery(row));
 
     return this._treelist && this._treelist.select(internalRow);
+  }
+
+  public itemFor(model: kendo.data.TreeListModel | Object): JQuery {
+    if (!model) {
+      return;
+    }
+
+    return this._treelist && this._treelist.itemFor(model);
   }
 
   public clearSelection(): void {

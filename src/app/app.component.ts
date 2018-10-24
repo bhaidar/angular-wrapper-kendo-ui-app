@@ -413,7 +413,17 @@ export class AppComponent implements OnInit {
     this.treelist.select('#treelist tbody>tr:eq(1)');
   }
 
+  itemFor(id: any): void {
+    const guyWooten = this.treelist.dataSource.get(id);
+
+    const secondRow = this.treelist.itemFor(guyWooten);
+
+    this.treelist.select(secondRow);
+  }
+
   clearSelection(): void {
+    console.log('content: ', this.treelist.content);
+    console.log('tbody: ', this.treelist.tbody);
     return this.treelist && this.treelist.clearSelection();
   }
 }
