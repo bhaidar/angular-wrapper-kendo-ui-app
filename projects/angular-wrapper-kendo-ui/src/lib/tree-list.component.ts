@@ -19,10 +19,9 @@ declare var kendo: any;
   templateUrl: './tree-list.component.html',
   styleUrls: ['./tree-list.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
-
   @Input()
   public options: kendo.ui.TreeListOptions;
 
@@ -31,10 +30,9 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private _treelist: any;
 
-  constructor(private zone: NgZone, private elementRef: ElementRef) { }
+  constructor(private zone: NgZone, private elementRef: ElementRef) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     const treeList = kendo.jQuery(this.treelistEl.nativeElement);
@@ -58,6 +56,10 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     return this._treelist && this._treelist.content;
   }
 
+  get thead(): JQuery {
+    return this._treelist && this._treelist.thead;
+  }
+
   get tbody(): JQuery {
     return this._treelist && this._treelist.tbody;
   }
@@ -66,14 +68,12 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     return this._treelist && this._treelist.addRow(parentRow);
   }
 
-  public editRow(row: string | JQuery ): void {
+  public editRow(row: string | JQuery): void {
     if (!row) {
       return;
     }
 
-    const internalRow = (row instanceof jQuery ? row : kendo.jQuery(row));
-
-
+    const internalRow = row instanceof jQuery ? row : kendo.jQuery(row);
     return this._treelist && this._treelist.editRow(internalRow);
   }
 
@@ -82,7 +82,8 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
       return;
     }
 
-    return this._treelist && this._treelist.removeRow(row);
+    const internalRow = row instanceof jQuery ? row : kendo.jQuery(row);
+    return this._treelist && this._treelist.removeRow(internalRow);
   }
 
   public expand(row: string | Element | JQuery): void {
@@ -90,7 +91,8 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
       return;
     }
 
-    return this._treelist && this._treelist.expand(row);
+    const internalRow = row instanceof jQuery ? row : kendo.jQuery(row);
+    return this._treelist && this._treelist.expand(internalRow);
   }
 
   public select(row: string | Element | JQuery): JQuery {
@@ -98,8 +100,7 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
       return;
     }
 
-    const internalRow = (row instanceof jQuery ? row : kendo.jQuery(row));
-
+    const internalRow = row instanceof jQuery ? row : kendo.jQuery(row);
     return this._treelist && this._treelist.select(internalRow);
   }
 
@@ -111,8 +112,16 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
     return this._treelist && this._treelist.itemFor(model);
   }
 
+  public dataItem(row: string | Element | JQuery): kendo.data.TreeListModel {
+    if (!row) {
+      return;
+    }
+
+    const internalRow = row instanceof jQuery ? row : kendo.jQuery(row);
+    return this._treelist && this._treelist.dataItem(internalRow);
+  }
+
   public clearSelection(): void {
     return this._treelist && this._treelist.clearSelection();
   }
-
 }
