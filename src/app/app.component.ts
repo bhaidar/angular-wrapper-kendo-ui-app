@@ -8,12 +8,12 @@ import { TreeListComponent } from 'projects/angular-wrapper-kendo-ui/src/public_
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
-  @ViewChild('treelist')
+  @ViewChild('treelist', { static: false })
   treelist: TreeListComponent;
 
   private options: any;
 
-  constructor(private zone: NgZone) {}
+  constructor(private zone: NgZone) { }
 
   ngOnInit(): void {
     const data = [
@@ -322,7 +322,7 @@ export class AppComponent implements OnInit {
 
     const dataSource = new kendo.data.TreeListDataSource({
       transport: {
-        create: function(options) {
+        create: function (options) {
           options.success([
             {
               id: 100,

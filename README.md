@@ -27,5 +27,3 @@ If you would like to help me add more functionality to this library, all you hav
 You can always drop me an email or communicate with me over Twitter:
 
 - Twitter: @bhaidar
-- Email:   bhaidar@gmail.com
-- Blog:    https://www.bilalhaidar.com

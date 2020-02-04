@@ -25,14 +25,14 @@ export class TreeListComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input()
   public options: kendo.ui.TreeListOptions;
 
-  @ViewChild('treelist')
+  @ViewChild('treelist', { static: false })
   treelistEl: ElementRef;
 
   private _treelist: any;
 
-  constructor(private zone: NgZone, private elementRef: ElementRef) {}
+  constructor(private zone: NgZone, private elementRef: ElementRef) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngAfterViewInit() {
     const treeList = kendo.jQuery(this.treelistEl.nativeElement);
