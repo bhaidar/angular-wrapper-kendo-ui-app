@@ -24,13 +24,13 @@
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
     "@progress/kendo-ui": "^2020.1.115",
-    "jquery": ">= 3.4.1"
+    "jquery": ">= 3.4.0"
   },
   "devDependencies": {
     "@progress/kendo-ui": "^2020.1.115",
     "@types/jquery": "^3.3.6",
     "@types/kendo-ui": "^2020.1.0",
     "@types/node": "~10.14.1",
-    "jquery": ">= 3.4.1"
+    "jquery": ">= 3.4.0"
   }
 }
