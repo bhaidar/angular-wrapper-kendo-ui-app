@@ -74,7 +74,6 @@
     "protractor": "^7.0.0",
     "rxjs-tslint": "^0.1.8",
     "ts-node": "~5.0.1",
-    "tsickle": "^0.37.0",
     "tslint": "^6.1.2",
     "webpack": "^4.43.0"
   },
