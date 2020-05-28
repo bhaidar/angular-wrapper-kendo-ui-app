@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   @ViewChild('treelist', { static: false })
   treelist: TreeListComponent;
 
-  private options: any;
+  public options: any;
 
   constructor(private zone: NgZone) { }
 
